@@ -1,0 +1,14 @@
+# Model ML
+*.h5
+
+# Upload user
+static/uploads/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+env/
+
+# OS
+.DS_Store

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LeekVision AI | Deteksi Penyakit Daun Bawang</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet" />
+    
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    
+    <link rel="stylesheet" href="/static/stayle.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-white" href="#hero">
+                🌿LeekVision AI
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="bi bi-list text-white fs-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto text-center mt-3 mt-lg-0">
+                    <li class="nav-item"><a class="nav-link text-white px-3" href="#hero">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link text-white px-3" href="#kategori">Kategori</a></li>
+                    <li class="nav-item"><a class="nav-link text-white px-3" href="#teknologi">Teknologi</a></li>
+                    <li class="nav-item">
+                        <a class="btn btn-tomato ms-lg-3 px-4" href="#diagnosa">Scan Daun</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <span class="badge bg-primary mb-3 px-3 py-2 rounded-pill shadow-sm">
+                        <i class="bi bi-patch-check me-2"></i>Smart Agriculture
+                    </span>
+                    <h1 class="display-3 fw-bold mb-4">Deteksi Cerdas Daun Bawang</h1>
+                    <p class="lead mb-4 text-muted">
+                        Analisis kesehatan tanaman bawang Anda secara instan menggunakan teknologi Deep Learning. Cukup unggah foto daun dan biarkan sistem kami mengidentifikasi penyakitnya.
+                    </p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#diagnosa" class="btn btn-tomato hero-btn shadow">Mulai Identifikasi</a>
+                        <a href="#kategori" class="btn btn-outline-light hero-btn">Lihat Gejala</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <lottie-player 
+                        src="/static/lottie/daun.json" 
+                        background="transparent" 
+                        speed="0.8" 
+                        class="lottie-hero mx-auto" 
+                        loop autoplay>
+                    </lottie-player>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kategori">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold display-5">Kategori Penyakit</h2>
+                <p class="text-muted mx-auto" style="max-width: 600px">
+                    Berikut adalah daftar penyakit daun bawang yang dapat dideteksi oleh LeekSkript AI.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="info-card">
+                        <div class="icon-box"><i class="bi bi-virus2 text-warning"></i></div>
+                        <h5 class="fw-bold text-white">Iris Yellow Virus</h5>
+                        <p class="small text-muted">Penyakit virus yang menyebabkan daun menguning, pertumbuhan terhambat, dan hasil panen menurun.</p>
+                        <div class="mt-3 badge bg-warning text-dark small">Viral Infection</div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="info-card">
+                        <div class="icon-box"><i class="bi bi-scooter text-secondary"></i></div>
+                        <h5 class="fw-bold text-white">Stemphylium Leaf Blight</h5>
+                        <p class="small text-muted">Penyakit jamur yang menyebabkan bercak coklat keabu-abuan pada daun dan dapat menyebabkan daun mengering.</p>
+                        <div class="mt-3 badge bg-secondary small">Fungal Disease</div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="info-card">
+                        <div class="icon-box"><i class="bi bi-droplet-half" style="color: #a855f7;"></i></div>
+                        <h5 class="fw-bold text-white">Purple Blotch</h5>
+                        <p class="small text-muted">Penyakit jamur yang ditandai bercak ungu kehitaman dengan tepi kekuningan pada daun.</p>
+                        <div class="mt-3 badge small" style="background-color: #a855f7;">Severe Fungal</div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="info-card">
+                        <div class="icon-box"><i class="bi bi-shield-check text-success"></i></div>
+                        <h5 class="fw-bold text-white">Healthy</h5>
+                        <p class="small text-muted">Daun bawang dalam kondisi sehat tanpa gejala penyakit. Pertumbuhan optimal.</p>
+                        <div class="mt-3 badge bg-success small">Optimal Condition</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="diagnosa" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold display-5">Scan & Identifikasi</h2>
+                <p class="text-muted">Arahkan kamera atau unggah foto daun bawang Anda.</p>
+            </div>
+
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <div class="diagnosis-card h-100">
+                        <div class="p-2">
+                            <h4 class="fw-bold mb-4"><i class="bi bi-cloud-upload me-2 text-primary"></i>Upload Citra</h4>
+                            <form id="uploadForm">
+                                <div class="border-dashed p-4 text-center mb-4">
+                                    <input type="file" name="image" class="form-control mb-3" accept="image/*" required />
+                                    <button type="submit" class="btn btn-tomato w-100 fw-bold">ANALISIS SEKARANG</button>
+                                </div>
+                            </form>
+                            
+                            <hr class="my-4 opacity-10">
+                            
+                            <h4 class="fw-bold mb-3"><i class="bi bi-camera me-2 text-primary"></i>Live Camera</h4>
+                            <div class="rounded-4 overflow-hidden border border-secondary shadow-sm">
+                                <img src="{{ url_for('video_feed') }}" class="w-100" style="min-height: 250px; object-fit: cover;" alt="Webcam Feed">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="diagnosis-card h-100 border-top border-4 border-primary">
+                        <h4 class="fw-bold mb-4 text-center">Hasil Diagnosa AI</h4>
+                        <div id="resultArea" class="text-center d-flex flex-column justify-content-center align-items-center h-100" style="min-height: 300px;">
+                            {% if image_path %}
+                                <img src="${data.image_path}" class="preview-img-container shadow-lg mb-3">
+                                <h3 class="fw-bold text-info">{{ prediction.replace('_', ' ') }}</h3>
+                                <div class="badge bg-primary mb-3">Confidence: {{ confidence }}%</div>
+                                <p class="text-muted small px-4">{{ description }}</p>
+                                <button class="btn btn-outline-danger btn-sm mt-3" onclick="deleteImage('{{ image_path }}')">Reset</button>
+                            {% else %}
+                                <div class="opacity-50">
+                                    <i class="bi bi-image-fill display-1"></i>
+                                    <p class="mt-3">Menunggu input gambar...</p>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="pt-5 pb-4 mt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <h4 class="fw-bold text-white mb-3">🌿 LeekVision AI AI</h4>
+                    <p class="text-muted" style="max-width: 450px;">
+                        Implementasi kecerdasan buatan dalam sektor pertanian untuk meningkatkan efisiensi pendeteksian penyakit daun bawang secara dini.
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="text-primary fw-bold text-uppercase mb-3">Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#hero" class="text-muted text-decoration-none small">Beranda</a></li>
+                        <li><a href="#kategori" class="text-muted text-decoration-none small">Kategori</a></li>
+                        <li><a href="#diagnosa" class="text-muted text-decoration-none small">Scan AI</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="text-primary fw-bold text-uppercase mb-3">Connect</h6>
+                    <div class="d-flex gap-3 fs-5">
+                        <a href="#" class="text-muted"><i class="bi bi-github"></i></a>
+                        <a href="#" class="text-muted"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="text-muted"><i class="bi bi-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 opacity-10">
+            <div class="text-center text-muted small">
+                &copy; 2026 LeekVision AI. Dikembangkan untuk Pertanian Indonesia Modern.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const uploadForm = document.getElementById("uploadForm");
+            const resultArea = document.getElementById("resultArea");
+
+            uploadForm.addEventListener("submit", async function (e) {
+                e.preventDefault();
+                
+                // Loading State
+                resultArea.innerHTML = `
+                    <div class="spinner-border text-primary mb-3" role="status"></div>
+                    <p class="text-muted">Sedang menganalisis citra...</p>
+                `;
+
+                const formData = new FormData(uploadForm);
+                try {
+                    const response = await fetch("/predict", {
+                        method: "POST",
+                        body: formData,
+                        headers: { "X-Requested-With": "XMLHttpRequest" }
+                    });
+                    
+                    const data = await response.json();
+                    
+                    // Bersihkan nama dengan spasi
+                    const cleanName = data.prediction.replace(/_/g, ' ');
+                    const statusColor = data.prediction === "healthy" ? "text-success" : "text-danger";
+
+                    resultArea.innerHTML = `
+                        <div class="animate-fade-in">
+                            <img src="${data.image_path}" class="preview-img-container shadow-lg mb-3">
+                            <h3 class="fw-bold ${statusColor} mb-2">${cleanName}</h3>
+                            <div class="badge bg-primary px-3 py-2 mb-3 shadow-sm">
+                                Akurasi: ${data.confidence}%
+                            </div>
+                            <p class="text-muted small px-3">${data.description}</p>
+                            <button class="btn btn-outline-danger btn-sm mt-3 px-4 rounded-pill" onclick="deleteImage('${data.image_path}')">
+                                <i class="bi bi-arrow-counterclockwise me-1"></i> Reset Analisis
+                            </button>
+                        </div>
+                    `;
+                } catch (err) {
+                    resultArea.innerHTML = `
+                        <i class="bi bi-exclamation-triangle display-3 text-danger mb-3"></i>
+                        <p class="text-danger">Terjadi kesalahan pada sistem. Coba lagi nanti.</p>
+                    `;
+                }
+            });
+
+            // Global function for delete
+            window.deleteImage = async function (imagePath) {
+                const formData = new FormData();
+                formData.append("image_path", imagePath);
+                
+                await fetch("/delete", { method: "POST", body: formData });
+                
+                resultArea.innerHTML = `
+                    <div class="opacity-50">
+                        <i class="bi bi-image-fill display-1"></i>
+                        <p class="mt-3">Gambar berhasil dihapus.</p>
+                    </div>
+                `;
+            };
+        });
+    </script>
+</body>
+</html>

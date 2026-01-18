@@ -1,0 +1,202 @@
+:root {
+  /* Blue Gradient Theme Variables */
+  --leek-dark: #0f172a;        /* Midnight Blue */
+  --leek-primary: #3b82f6;      /* Bright Blue */
+  --leek-accent: #06b6d4;       /* Cyan/Electric Blue */
+  --bg-dark-depth: #070a13;    /* Background Near Black */
+  --card-bg: #1e293b;          /* Slate Blue Card */
+  --text-main: #f8fafc;        /* Off White */
+  --text-muted: #94a3b8;      
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: var(--bg-dark-depth);
+  color: var(--text-main);
+  scroll-behavior: smooth;
+}
+
+/* Full Screen Sections */
+section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 100px 0;
+}
+
+/* Navbar & Footer Color Match */
+.bg-forest {
+  background: var(--leek-dark) !important;
+}
+
+.navbar-custom {
+  background: rgba(15, 23, 42, 0.9) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid var(--leek-accent);
+  padding: 15px 0;
+}
+
+/* Hero Section with Blue Gradient */
+.hero-section {
+  background: linear-gradient(
+    135deg,
+    #0f172a 0%,
+    #1e1b4b 50%,
+    #070a13 100%
+  );
+  color: white;
+  border-radius: 0 0 50px 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Kategori Klasifikasi - Dark Card Style */
+.info-card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  height: 100%;
+  padding: 2.5rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.info-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--leek-accent);
+  box-shadow: 0 15px 40px rgba(6, 182, 212, 0.2);
+}
+
+.icon-box {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  background: rgba(6, 182, 212, 0.1);
+  color: var(--leek-accent);
+}
+
+/* Tech Section */
+.tech-badge {
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  border-bottom: 4px solid var(--leek-primary);
+  transition: 0.3s;
+}
+
+.tech-badge:hover {
+  transform: scale(1.05);
+}
+
+.tech-badge img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.5));
+}
+
+/* UI Diagnosa Blue Styled */
+.border-dashed {
+  border: 2px dashed var(--leek-primary);
+  background: rgba(59, 130, 246, 0.05);
+  border-radius: 25px;
+}
+
+.preview-img-container {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+  border-radius: 20px;
+  background: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.diagnosis-card {
+  background: var(--card-bg);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 520px;
+  padding: 30px;
+}
+
+.diagnosis-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Tombol Blue Gradient */
+.btn-tomato {
+  background: linear-gradient(90deg, var(--leek-primary), var(--leek-accent));
+  color: white !important;
+  font-weight: 800;
+  border-radius: 50px;
+  padding: 15px 35px;
+  border: none;
+  transition: 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-tomato:hover {
+  background: white;
+  color: var(--leek-dark) !important;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.5);
+}
+
+/* Tombol hero */
+.hero-btn {
+  padding: 14px 32px;
+  font-size: 1rem;
+  border-radius: 50px;
+}
+
+/* Footer Styling */
+footer {
+  background: #04060b;
+  color: var(--text-muted);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+footer h5 {
+  color: var(--leek-accent);
+  font-weight: 700;
+}
+
+footer .nav-link {
+  color: var(--text-muted) !important;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+footer .nav-link:hover {
+  color: var(--leek-accent) !important;
+}
+
+/* Mobile aman */
+@media (max-width: 768px) {
+  .lottie-hero {
+    width: 300px;
+    height: 300px;
+    transform: translateY(0);
+  }
+  section {
+    padding: 60px 0;
+  }
+}
+
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+.text-success {
+  color: var(--leek-accent) !important;
+}
